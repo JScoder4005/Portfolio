@@ -1,105 +1,3 @@
-// import { projects } from '@/data';
-// import React from 'react';
-// import { PinContainer } from './ui/3d-pin';
-
-// const RecentProjects = () => {
-//   return (
-//     <div className="py-20">
-//       <h1 className="heading">
-//         A small selection of{' '}
-//         <span className="text-purple">recent projects</span>
-//       </h1>
-//       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-//         {projects.map(({ id, title, des, img, iconLists, link }) => (
-//           <div
-//             key={id}
-//             className="lg:min-h[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-//           >
-//             <PinContainer title={title} href={link}>
-//               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-//                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-//                   <img src="/bg.png" alt="bg-img" />
-//                 </div>
-//                 <img src={img} alt={title} className="z-10 absolute bottom-0" />
-//               </div>
-//               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-//                 {title}
-//               </h1>
-//               <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-1">
-//                 {des}
-//               </p>
-//             </PinContainer>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default RecentProjects;
-
-// import { projects } from '@/data';
-// import React from 'react';
-// import { PinContainer } from './ui/3d-pin';
-// import { FaLocationArrow } from 'react-icons/fa6';
-
-// const RecentProjects = () => {
-//   return (
-//     <div className="py-20">
-//       <h1 className="heading">
-//         A small selection of{' '}
-//         <span className="text-purple">recent projects</span>
-//       </h1>
-//       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
-//         {projects.map(({ id, title, des, img, iconLists, link }) => (
-//           <div
-//             key={id}
-//             className="sm:h-[41rem] lg:min-h[32.5rem] h-[32rem] flex justify-center items-center sm:w-[570px] w-[80vw]"
-//           >
-//             <PinContainer title={link} href={link}>
-//               <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[20vh] mb-10">
-//                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-//                   <img src="/bg.png" alt="bg-img" />
-//                 </div>
-//                 <img src={img} alt={title} className="z-10 absolute bottom-0" />
-//               </div>
-//               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-//                 {title}
-//               </h1>
-//               <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-1">
-//                 {des}
-//               </p>
-//               <div className="flex items-center justify-between mt-7 mb-3">
-//                 <div className="flex items-center">
-//                   {iconLists.map((icon, index) => (
-//                     <div
-//                       key={icon}
-//                       className="border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-//                       style={{
-//                         transform: `translateX(-${5 * index + 2}px)`,
-//                       }}
-//                     >
-//                       <img src={icon} alt={icon} className="p-2" />
-//                     </div>
-//                   ))}
-//                 </div>
-//                 <div className="flex justify-center items-center">
-//                   <p className="flex lg:text-xl md:text-xs text-sm text-purple ">
-//                     Check Live Site
-//                   </p>
-//                   <FaLocationArrow className="ms-3" color="#CBACF9" />
-//                 </div>
-//               </div>
-//             </PinContainer>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default RecentProjects;
-
 import { projects } from '@/data';
 import React from 'react';
 import { PinContainer } from './ui/3d-pin';
@@ -112,54 +10,63 @@ const RecentProjects = () => {
         A small selection of{' '}
         <span className="text-purple">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-        {projects.map(({ id, title, des, img, iconLists, link }) => (
-          <div
-            key={id}
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-          >
-            <PinContainer title={title} href={link}>
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden lg:h-[30vh] h-[20vh] mb-10">
-                <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-                  <img
-                    src="/bg.png"
-                    alt="bg-img"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <img src={img} alt={title} className="z-10 absolute bottom-0" />
-              </div>
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {title}
-              </h1>
-              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
-                {des}
-              </p>
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
-                  {iconLists.map((icon, index) => (
-                    <div
-                      key={icon}
-                      //className="border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      className="border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
-                    >
-                      <img src={icon} alt={icon} className="p-2" />
+
+      {/* Changed to horizontal scroll container */}
+      <div className="relative mt-10  w-full">
+        <div className="flex justify-start overflow-x-auto gap-8 pb-8 ">
+          {projects.map(({ id, title, des, img, iconLists, link }) => (
+            <div key={id} className="w-full max-w-sm snap-center">
+              <PinContainer title={title} href={link}>
+                <div className="flex flex-col h-full w-full space-y-4">
+                  <div className="relative w-full aspect-video overflow-hidden rounded-xl bg-[#13162d]">
+                    <img
+                      src="/bg.png"
+                      alt="bg-img"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <img
+                      src={img}
+                      alt={title}
+                      className="absolute bottom-0 left-1/2 -translate-x-1/2 max-h-[90%] w-auto"
+                    />
+                  </div>
+
+                  <div className="space-y-2 p-2">
+                    <h1 className="font-bold text-lg md:text-xl truncate">
+                      {title}
+                    </h1>
+                    <p className="text-sm md:text-base line-clamp-2 min-h-[2.5rem]">
+                      {des}
+                    </p>
+                  </div>
+
+                  <div className="flex items-center justify-between mt-auto p-2">
+                    <div className="flex items-center">
+                      {iconLists.map((icon, index) => (
+                        <div
+                          key={icon}
+                          className="border border-white/[0.2] rounded-full bg-black w-8 h-8 md:w-10 md:h-10 flex justify-center items-center -ml-2 first:ml-0"
+                        >
+                          <img src={icon} alt={icon} className="p-2" />
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                    <div className="flex items-center group">
+                      <p className="text-sm md:text-base text-purple">
+                        Check Live Site
+                      </p>
+                      <FaLocationArrow className="ml-2 text-purple" />
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
-                </div>
-              </div>
-            </PinContainer>
-          </div>
-        ))}
+              </PinContainer>
+            </div>
+          ))}
+        </div>
+
+        {/* Optional scroll indicators */}
+        <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-black/50 to-transparent" />
+        <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-l from-black/50 to-transparent" />
       </div>
     </div>
   );
